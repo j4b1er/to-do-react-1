@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.to-do-app {
+  background-color: #293241;
+  border-radius: 5px 5px 0 0;
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  min-width: 500px;
+  margin: 0 auto;
+  border: 1px solid rgba(224, 251, 252, 0.05);
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ee6c4d;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.input-form {
+  margin: 1rem 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.input-form input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #e0fbfc;
+  color: #293241;
+  font-size: 1rem;
+}
+
+.input-form input[type="text"]:focus {
+  border: none;
+}
+
+.input-form button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  background-color: #ee6c4d;
+  color: #e0fbfc;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.item {
+  color: #e0fbfc;
+  padding: 0.5rem 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid rgba(224, 251, 252, 0.05);
+}
+
+.item input[type="checkbox"],
+.item label {
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.footer {
+  background-color: #3d5a80;
+  border-top: 1px solid rgba(224, 251, 252, 0.05);
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  padding: 0.75rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.825rem;
+  color: #e0fbfc;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.filters input[type="radio"] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.filters label {
+  cursor: pointer;
+  border: 1px solid rgba(224, 251, 252, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.filters input[type="radio"]:checked + label,
+.filters label:hover {
+  background-color: #ee6c4d;
+}
